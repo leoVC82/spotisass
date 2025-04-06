@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <Link rel="Stylesheet" href="./LoggedLayout.css">
+    <title>Layout</title>
+</head>
+<body>
+    <!--***********************************Left Menu*****************-->
+    <article class="logged-layout">
+        <section class="logged-layout__content">
+            <section class="logged-layout__content-left-menu">
+                <div class="menu-header">
+                    <img class="menu-icon" src="../assets/icons/office.png" alt="imagen-icono">
+                </div>
+                <p>Left Menu</p>
+                <!--Aqui voy-->
+                <nav class="logged-layout__content-left-menu__Nav-menu">
+                  <div class="menu-vertical">
+                    <p><a href="../index.html">Inicio</a></p>
+                    <img class="icon-home" src="../assets/icons/home.png">                    
+                  </div>
+                  <div class="menu-artists">
+                    <p><a href="">Artistas</a></p>
+                    <img class="icon-user" src="../assets/icons/userOrange.png">
+                  </div>
+                  <div class="menu-album">
+                    <p><a href="#">Albums</a></p>
+                    <img class="icon-disc" src="../assets/icons/musicIcon1.png">
+                  </div> 
+                  <aside class="aside-menu">
+                    <div class="new-song">
+                        <p>Agregar Canción</p>
+                        <a href="../components/Add-SongForm/AddSongForm.html">
+                            <img class="icon-plus" src="../assets/icons/add.png">
+                        </a>                       
+                    </div>
+                    <div class="new-artist">
+                        <p>Agregar Artista</p>
+                        <a href="../components/Add-SingerForm/AddSingerForm.html">
+                            <img class="icon-plus" src="../assets/icons/add.png">
+                        </a>                       
+                    </div>
+                    <div class="new-album">
+                        <p>Agregar Album</p>
+                        <a href="../components/Add-AlbumForm/AddAlbumForm.html">
+                            <img class="icon-plus" src="../assets/icons/add.png">
+                        </a>                       
+                    </div>
+                </aside>  
+                </nav>
+                
+            </section>
+
+            <!--**************Header Principal Page*********************************-->
+
+            <section class="logged-layout__content-children-content">
+                <section class="logged-layout__content-children-content-top-bar">
+                    <div class="grid-container">
+                        <div class="grid-container__back">
+                            <a href="#"><img class="icon-back" src="../assets/icons/back.png"></a>
+                        </div>
+                        <div class="grid-container__user">
+                            <a href="../pages/Profile/Profile.html"><p>UserName</p></a>
+                            <a href="#"><img class="icon-power" src="../assets/icons/power.png"></a>
+                        </div>
+                        <div class="grid-container__session">
+                           
+                        </div>            
+                    </div>                   
+                                                           
+                </section>
+
+<!--***********************************Principal Component*****************-->
+
+                <section class="grid-container">
+                    <div class="card-center">
+                        <div class="div-image">
+                            <h1>Alejandro Sanz</h1> 
+                        </div>                    
+                        <card class="album-list">
+                            <table>
+                                
+                                <tr class="table-body">
+                                    <td><img class="image-icon" src="../assets/png/Alejandro_Sanz-El_Alma_Al_Aire-CD[1].png" alt="image-disk"></td>
+                                    <td>El alma al aire</td>
+                                    <td>20,203,589</td>
+                                    <td>3:15</td>
+                                </tr>
+                                <tr class="table-body">
+                                    <td><img class="image-icon" src="../assets/png/Alejandro_Sanz-El_Alma_Al_Aire-CD[1].png" alt="image-disk"></td>
+                                    <td>Para que me quieras</td>
+                                    <td>60,789,230</td>
+                                    <td>4:15</td>
+                                </tr>
+                                <tr class="table-body">
+                                    <td><img class="image-icon" src="../assets/png/Alejandro_Sanz-El_Alma_Al_Aire-CD[1].png" alt="image-disk"></td>
+                                    <td>Llega llega soledad</td>
+                                    <td>23,125,789</td>
+                                    <td>4:18</td>
+                                </tr>
+                            </table>
+                        </card>
+                    </div>
+                    <div class="grid-container-right">
+                        <card class="photo-album">
+                            <img class="image-album" src="../assets/png/Alejandro_Sanz-El_Alma_Al_Aire-Frontal[1].png" alt="photo-album">
+                            <h1>El alma al aire</h1>
+                        </card>
+                        <card class="info-artist">
+                            <img class="image-history" src="../assets/png/SanzAlmaalAire.png" alt="photo-history">
+                            <h2>Historia</h2>
+                            <p>
+                                "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?" 
+                            </p>
+                        </card>
+                    </div>
+                </section>
+            </section>            
+        </section>
+    </article>
+    <article class="logged-layout__footer">
+        <article  class="grid-container">
+            <section class="footer-left">
+                <img class="image-footer" src="../assets/png/Alejandro_Sanz-El_Alma_Al_Aire-Frontal[1].png" alt="icon-disk">
+                <p>El alma al aire</p>
+            </section>
+            <section class="footer-center">
+                <div class="player">
+                    <img class="play" src="../assets/icons/playButton.png">
+                    <input type="range" min="0" max="1" value="0.5" step="0.1">
+                </div>
+            </section>
+            <section class="footer-right">
+                <img class="icon-vol" src="../assets/icons/volumen.png">
+                <input type="range" min="0" max="1" value="0.5" step="0.1" id="mislider">
+                <span id="valor">50%</span>
+            </section>
+        </article>        
+    </article>    
+</body>
+</html>

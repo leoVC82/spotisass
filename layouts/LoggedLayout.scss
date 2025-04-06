@@ -1,0 +1,471 @@
+@import "../scss/index.scss";
+
+
+$footerHeight: 100px;
+$menuWidth: 200px;
+
+@mixin icon {
+    width: 30px;
+    height: 30px;
+    align-self: center;
+}
+
+@mixin a {
+    text-decoration: none;
+
+}
+
+@mixin menu {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    border-left: 5px solid transparent;
+    color: $font-grey;
+    box-sizing: border-box;
+}
+
+@mixin hover {
+    border-left: 5px solid transparent;
+    border-color: $primary-color-hover;
+    color: $font-light;
+}
+
+//*************  MENU LATERAL IZQUIERDO **************************************************************
+
+.logged-layout {
+    height: 100vh;
+    background-color: $background-primary;
+
+    &__content {
+        display: flex;
+        height: calc(100% - $footerHeight);
+
+
+
+        &-left-menu {
+            background-color: $background-dark;
+            width: $menuWidth;
+
+            .menu-header {
+                display: flex;
+
+                & .menu-icon {
+                    @include icon;
+                }
+            }
+
+            //***************  NAVBAR  ******************************************************
+
+            &__Nav-menu {
+                padding-top: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: stretch;
+                height: 100%;
+                box-sizing: border-box;
+                gap: 10px;
+                margin-right: 5px;
+
+                .menu-vertical {
+                    @include menu;
+
+                    .icon-home {
+                        @include icon;
+                    }
+
+                    a {
+                        @include a;
+                    }
+                }
+
+                .menu-vertical:hover {
+                    @include hover;
+                }
+
+                .menu-artists {
+                    @include menu;
+
+                    .icon-user {
+                        @include icon;
+                    }
+
+                    a {
+                        @include a;
+                    }
+                }
+
+                .menu-artists:hover {
+                    @include hover;
+                }
+
+                .aside-menu {
+                    padding-top: 20%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    gap: 10px;
+                }
+
+                .menu-album {
+                    @include menu;
+
+                    .icon-disc {
+                        @include icon;
+                    }
+
+                    a {
+                        @include a;
+                    }
+                }
+
+                .menu-album:hover {
+                    @include hover;
+                }
+
+                .new-song {
+                    @include menu;
+                    align-items: center;
+                }
+
+                .icon-plus {
+                    width: 30px;
+                    height: 25px;
+                }
+
+                .new-artist {
+                    @include menu;
+                    align-items: center;
+                }
+
+                .new-album {
+                    @include menu;
+                    align-items: center;
+                }
+            }
+        }
+
+        // ******************** HEADER PRINCIPAL PAGE  *****************************************
+
+        &-children-content {
+            width: calc(100% - $menuWidth);
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            &-top-bar {
+                position: relative;
+                width: 100%;
+                height: 80px;
+                z-index: 1;
+
+                .grid-container {
+                    display: grid;
+                    grid-template-columns: 3fr 1fr 1fr;
+                    grid-row: 1;
+                    gap: 5px;
+                    align-items: center;
+                    box-sizing: border-box;
+                    margin: 0 auto;
+
+                    .icon-back {
+                        width: 20px;
+                    }
+
+                    .icon-power {
+                        width: 20px;
+                    }
+
+                    &__user {
+                        text-transform: uppercase;
+                        color: $primary-color-hover;
+                        font-size: 15px;
+                    }
+
+                    .grid-container__user a {
+                        @include a;
+                    }
+                }
+            }
+
+            .logged-layout__content-children-content-top-bar h1 {
+                font-size: 25px;
+                font-weight: bold;
+                color: $primary-color;
+
+            }
+
+            .bar-principal {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                height: 100%;
+                padding: 0 5px;
+
+                .icon-back {
+                    width: 50px;
+                }
+            }
+
+        }
+    }
+
+    // ************** MAIN ****************************************************************
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-row: 1;
+        gap: 5px;
+        align-items: center;
+        box-sizing: border-box;
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    .div-image {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 300px;
+        background-image: url('../assets/jpg/banner-home.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .div-image h1 {
+        font-size: 25px;
+        margin-top: 5px;
+    }
+
+    .card-center {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .image-principal {
+        display: grid;
+        width: 200px;
+        height: 260px;
+        margin-left: 400px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .album-list {
+        table {
+            width: 100%;
+            height: 200px;
+            border: 1px solid $background-dark;
+            background-color: $primary-color;
+            padding: 0.3rem;
+            caption-side: bottom;
+        }
+
+        th,
+        td {
+            width: 25%;
+            text-align: center;
+            vertical-align: center;
+            background: $background-secondary;
+            color: $font-light;
+        }
+
+        .table-body {
+            font-size: 18px;
+            font-style: italic;
+
+        }
+
+        .table-body img {
+            width: 50px;
+
+        }
+    }
+
+    .grid-container-right {
+        display: block;
+        justify-items: center;
+        border-top: 1px solid $border-primary;
+        border-left: 3px solid $border-primary;
+        border-bottom: 4px solid $border-primary;
+        margin-left: 5px;
+    }
+
+    .photo-album {
+        display: block;
+        gap: 5px;
+
+    }
+
+    .image-album {
+        margin-top: 3px;
+        width: 100px;
+        display: block;
+    }
+
+    .photo-album h1 {
+        font-size: 15px;
+    }
+
+    .info-artist {
+        display: block;
+        border-top: 3px solid $border-primary;
+    }
+
+    .image-history {
+        margin-top: 3px;
+        margin-left: 3px;
+        width: 50px;
+        display: block;
+        justify-self: star;
+    }
+
+    .info-artist h2 {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .info-artist p {
+        font-size: 12px;
+        text-align: justify;
+        padding: 5px;
+    }
+
+    // ***************   FOOTER **************************************************************
+
+    &__footer {
+        position: relative;
+        background-color: $background-primary;
+        height: $footerHeight;
+        border-top: 1px solid $border-primary;
+        box-shadow: 0px 0px 20px -5px $primary-color;
+        z-index: 1;
+
+        .grid-container {
+            margin-top: 5px;
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 1;
+            align-items: center;
+        }
+
+        .footer-left {
+            display: flex;
+            align-items: center;
+            justify-content: stretch;
+            height: 100%;
+            margin: 0 20px;
+        }
+
+        .image-footer {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .footer-center {
+            display: flex;
+            width: 60%;
+            text-align: center;
+            justify-content: space-around;
+        }
+
+        .play,
+        .pause {
+            width: 30px;
+        }
+
+        .play:hover {
+            cursor: pointer;
+            opacity: 0.6;
+        }
+
+        .puase:hover {
+            cursor: pointer;
+            opacity: 0.6;
+        }
+
+        .footer-right {
+            display: flex;
+            align-items: end;
+            justify-content: space-around;
+            width: 20%;
+            margin: 0 auto;
+        }
+
+        .icon-vol {
+            width: 20px;
+        }
+
+        #mislider {
+            cursor: pointer;
+        }
+    }
+
+}
+
+// ******** MEDIAS QUERIES TABLET ***************************************
+
+@media screen and (min-width:50em) and (max-width:64em) {
+    html {
+        width: 800px;
+        margin: 0.125em;
+        font-size: 0.93em;
+    }
+
+    .grid-container {
+        display: grid;
+        justify-content: center;
+        font-size: clamp(15px, 20vw, 20px);
+
+    }
+
+    .div-image {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        width: 50px;
+        height: 500px;
+
+    }
+
+    .logged-layout__footer {
+        font-size: clamp(15px, 20vw, 20px);
+    }
+
+    .__footer {
+        position: relative;
+    }
+
+    .grid-container {
+        margin-top: 5px;
+        display: flex;
+        align-items: center;
+        font-size: clamp(15px, 20vw, 20px);
+    }
+
+    .footer-left {
+        display: flex;
+        align-items: center;
+        justify-content: stretch;
+        height: 100%;
+        margin: 0 20px;
+    }
+
+    .image-footer {
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+    }
+
+    .info-artist{
+        font-size: clamp(15px, 20vw, 20px);
+    }
+
+}

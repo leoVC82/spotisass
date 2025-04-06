@@ -1,0 +1,115 @@
+@import "../../scss/index.scss";
+
+@mixin position {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 0;
+}
+
+@mixin span {
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+@mixin button {
+    margin: 0;
+    width: 100px;
+    height: 50px;
+    border-radius: 100px;
+    background-color: $color-essential;
+    color: $font-dark;
+    font-weight: bold;
+}
+
+@mixin hover {
+    cursor:pointer;
+    background-color: $primary-color-hover;
+    color:$font-dark;
+    font-size: 15px;
+}
+
+.profile {
+    padding: 20px;
+    background-color: $background-primary;
+
+    .profile__block {
+        @include position;
+       
+    }
+
+    .profile__block span {
+        @include span;
+    }
+
+    .btn-update {
+        @include button;
+    }
+
+    .profile__email {
+        @include position;
+        
+    }
+
+    .profile__email span{
+        @include span;
+    }
+    .btn-email {
+        @include button;
+    }
+    .profile__password{
+        @include position;
+        
+    }
+    .profile__password span{
+        @include span;
+    }
+    .btn-password{
+        @include button;
+    }
+    .return{
+        @include position;
+    }
+    .return span{
+        @include span;
+    }
+    .btn-return{
+        @include button;
+    }
+}
+
+.btn-update:hover {
+    @include hover;
+}
+
+.btn-email:hover {
+    @include hover;
+}
+.btn-password:hover{
+    @include hover;
+}
+.btn-return:hover{
+    cursor:pointer;
+    background-color: $danger;
+    color:$font-dark;
+    font-size: 15px;
+}
+
+.avatar-update{
+    width: 100px;
+    border: 2px solid $font-grey;
+    border-style: dashed;
+    border-radius: 100px;
+    padding:10px;
+    &:hover {
+        cursor:pointer;
+        opacity: 0.9;
+        border: 2px solid $primary-color-hover;
+    }
+    .default-avatar{
+        width:100px;
+        border-radius: 100px;        
+    }
+}
+
+
