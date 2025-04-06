@@ -1,0 +1,78 @@
+*,
+h1,
+a,
+p {
+  color: rgb(241, 234, 221);
+}
+
+.addAlbum-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 500px;
+  border-radius: 10px;
+  background-color: rgb(3, 3, 3);
+  padding: 50px 70px;
+  box-shadow: 10px 5px 5px rgb(174, 106, 4);
+}
+.addAlbum-form-title {
+  color: rgb(241, 234, 221);
+  text-align: center;
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+.addAlbum-form .addAlbum-form-user input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 10px;
+  width: 80%;
+  background-color: rgb(242, 210, 163);
+  color: rgb(24, 24, 23);
+  font-weight: bold;
+  border-radius: 5px;
+  border-color: rgb(24, 24, 23);
+}
+.addAlbum-form .addAlbum-form-user button {
+  margin-top: 10px;
+  width: 50%;
+  height: 60px;
+  border-radius: 30px;
+  background-color: rgb(175, 103, 3);
+  border-color: rgb(24, 24, 23);
+  letter-spacing: 3px;
+}
+.addAlbum-form .addAlbum-form-user button:hover {
+  background-color: rgb(255, 153, 0);
+  color: rgb(24, 24, 23);
+  cursor: pointer;
+  border-color: rgb(24, 24, 23);
+}
+.addAlbum-form-options {
+  margin-top: 50px;
+  display: flex;
+  color: rgb(241, 234, 221);
+  text-align: center;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  gap: 10px;
+}
+.addAlbum-form-options p:first-of-type {
+  margin: buttom 40px;
+  cursor: pointer;
+}
+.addAlbum-form-options p:last-of-type {
+  color: rgb(186, 180, 170);
+}
+.addAlbum-form-options p:last-of-type span {
+  color: rgb(240, 248, 255);
+  text-decoration: underline;
+  padding-left: 5px;
+  cursor: pointer;
+}
+.addAlbum-form-options a {
+  text-decoration: none;
+}/*# sourceMappingURL=AddAlbumForm.css.map */

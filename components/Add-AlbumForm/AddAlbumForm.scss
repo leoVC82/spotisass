@@ -1,0 +1,100 @@
+@import "../../scss/index.scss";
+
+
+@mixin align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+@mixin hover {
+    background-color: $primary-color-hover;
+    color:$font-dark;
+    cursor:pointer;
+    //box-shadow: 3px 0px 10px $primary-color-hover;
+    border-color: $font-dark;
+}
+
+.addAlbum-form {
+    @include align;
+    width: 500px;
+    border-radius: 10px;
+    background-color: $background-dark;
+    padding: 50px 70px;
+    box-shadow: $box-shadow;
+   
+    
+
+    &-title {
+        color: $font-light;
+        text-align: center;
+        font-size: 30px;
+        padding-bottom: 20px;
+    }
+
+    
+    .addAlbum-form-user input{
+
+        @include align;
+        padding:10px;
+        width:80%;
+        background-color: $color-essential;
+        color:$font-dark;
+        font-weight: bold;
+        border-radius:5px;
+        border-color: $font-dark;
+        
+    }
+
+
+    .addAlbum-form-user button{
+        margin-top: 10px;
+        width: 50%;
+        height: 60px;
+        border-radius: 30px;
+        background-color:$primary-color;
+        border-color: $font-dark;
+        letter-spacing: 3px;
+
+        &:hover{
+            @include hover;
+        }
+    }
+
+    &-options{
+        margin-top: 50px;
+        display:flex;
+        color: $font-light;
+        text-align:center;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: bold;
+        gap:10px;
+
+        p{
+            &:first-of-type{
+                margin: buttom 40px;
+                cursor:pointer;
+
+            }
+
+            &:last-of-type{
+                color:$font-grey;
+
+                span{
+                    color:rgb(240, 248, 255);
+                    text-decoration: underline;
+                    padding-left: 5px;
+                    cursor:pointer;
+                }
+
+                
+            }
+        }
+
+        a{
+            text-decoration: none;
+        }
+    }
+}
